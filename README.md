@@ -5,7 +5,7 @@ All public domain.
 
 |  library  | description
 |-----------|-------------
-| rjm_mc.h  | Uses Marching Cubes to convert an isosurface into triangles
+| [rjm_mc.h](rjm_mc.h) | Uses Marching Cubes to convert an isosurface into triangles
 
 
 This is free and unencumbered software released into the public domain.
