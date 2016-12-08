@@ -598,9 +598,9 @@ McMesh mcGenerate(const float *bmin, const float *bmax, float cellsize, McIsoFn 
 	for (int n=0;n<help.mesh.nverts;n++)
 	{
 		McVertex *v = &help.mesh.verts[n];
-		float v1[3] = { v->x + epsilon, v->y, v->z };
-		float v2[3] = { v->x, v->y + epsilon, v->z };
-		float v3[3] = { v->x, v->y, v->z + epsilon };
+		float v1[3] = { v->x - epsilon, v->y, v->z };
+		float v2[3] = { v->x, v->y - epsilon, v->z };
+		float v3[3] = { v->x, v->y, v->z - epsilon };
 
 		// Sample the field locally 4 times to compute the field gradient.
 		float f1 = fn(v1, extra, userparam);
