@@ -6,6 +6,7 @@ All public domain.
 |  library  | description
 |-----------|-------------
 | [rjm_mc.h](rjm_mc.h) | Uses Marching Cubes to convert an isosurface into triangles
+| [rjm_texbleed.h](rjm_texbleed.h) | Fills in the color of pixels where alpha==0
 
 
 This is free and unencumbered software released into the public domain.
