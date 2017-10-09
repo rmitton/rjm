@@ -6,6 +6,7 @@ All public domain.
 |  library  | description
 |-----------|-------------
 | [rjm_mc.h](rjm_mc.h) | Uses Marching Cubes to convert an isosurface into triangles
+| [rjm_raytrace.h](rjm_raytrace.h) | Fast SSE packet raytracer, designed for AO baking.
 | [rjm_texbleed.h](rjm_texbleed.h) | Fills in the color of pixels where alpha==0
 
 
