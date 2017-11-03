@@ -41,7 +41,7 @@
 // Given U/V barycentric co-ordinates on a triangle, should return the
 // opacity (0-1) at that location. Just return 0 if you want to completely
 // ignore an intersection.
-typedef float RjmRayFilterFn(int triIdx, int rayIdx, float u, float v, void *userdata);
+typedef float RjmRayFilterFn(int triIdx, int rayIdx, float t, float u, float v, void *userdata);
 
 // Tree structure containing your scene.
 typedef struct RjmRayTree
@@ -392,7 +392,7 @@ void rjm_raytrace(RjmRayTree *tree, int nrays, RjmRay *rays, float cutoff, RjmRa
 								if (out_t[n] < ray->t) {
 									float opacity = 1.0f;
 									if (filter)
-										opacity = filter(triIdx, rayidx[n], out_u[n], out_v[n], userdata);
+										opacity = filter(triIdx, rayidx[n], out_t[n], out_u[n], out_v[n], userdata);
 									if (cutoff >= 0)
 									{
 										// Shadow mode, accumulate total visibility.
